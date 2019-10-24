@@ -35,7 +35,8 @@ class PaymentController {
                 console.log(error.response);
                 throw error;
             } else {
-                res.send('Success');
+                console.log(payment)
+                res.render('payment');
             }
         });
     }
@@ -48,6 +49,7 @@ class PaymentController {
                 if (error) {
                     throw error;
                 } else {
+                    console.log(payment)
                     return res.json(payment);
                 }
             });
